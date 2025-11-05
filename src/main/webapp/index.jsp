@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,66 +6,71 @@
     <style>
         body {
             font-family: Arial;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f2f2f2;
         }
-        form {
+        .container {
+            width: 400px;
             background-color: white;
             padding: 25px;
+            margin: 50px auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px gray;
-            width: 350px;
+            box-shadow: 0px 0px 10px gray;
         }
         h2 {
             text-align: center;
             color: #333;
         }
-        input, select {
+        input[type=text], input[type=password], input[type=email], select {
             width: 100%;
-            padding: 8px;
-            margin: 8px 0;
-            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0 15px 0;
             border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        input[type="submit"] {
+        input[type=submit] {
+            width: 100%;
             background-color: #4CAF50;
             color: white;
             border: none;
+            padding: 10px;
+            border-radius: 5px;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
+        input[type=submit]:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <form action="success.jsp" method="post">
-        <h2>Student Registration</h2>
-        <label>Full Name:</label>
-        <input type="text" name="name" required>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form action="success.jsp" method="post">
+            <label>Full Name:</label>
+            <input type="text" name="name" required>
 
-        <label>Email:</label>
-        <input type="email" name="email" required>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Gender:</label>
-        <select name="gender" required>
-            <option value="">--Select--</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
+            <label>Username:</label>
+            <input type="text" name="username" required>
 
-        <label>Course:</label>
-        <input type="text" name="course" required>
+            <label>Password:</label>
+            <input type="password" name="password" required>
 
-        <label>Phone Number:</label>
-        <input type="text" name="phone" required>
+            <label>Language:</label>
+            <select name="language" required>
+                <option value="">-- Select Language --</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Other">Other</option>
+            </select>
 
-        <input type="submit" value="Register">
-    </form>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 </html>
+
 
