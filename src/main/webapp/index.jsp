@@ -44,7 +44,7 @@
 <body>
     <div class="container">
         <h2>Student Registration Form</h2>
-        <form action="success.jsp" method="post">
+        <form action="form.jsp" method="post">
             <label>Full Name:</label>
             <input type="text" name="name" required>
 
